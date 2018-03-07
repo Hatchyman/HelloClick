@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.epita.helloclick.MainActivity">
+
+    <TextView
+        android:id="@+id/textHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_hello"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <Button
+        android:id="@+id/buttonClick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintHorizontal_weight="2"
+        android:text="@string/click_me"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonReset"
+        app:layout_constraintTop_toBottomOf="@id/textHello" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/reset"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/buttonClick"
+        app:layout_constraintRight_toLeftOf="@id/buttonReverse"
+        app:layout_constraintTop_toBottomOf="@id/textHello" />
+
+
+    <Button
+        android:id="@+id/buttonReverse"
+        android:layout_width="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="1dp"
+        android:text="@string/reverse"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/buttonReset"
+        app:layout_constraintTop_toBottomOf="@id/textHello"
+        />
+
+    <TextView
+        android:id="@+id/textViewCount"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="#FF0000"
+        android:gravity="right"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/text_count"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonReverse"
+      />
+
+    <TextView
+        android:id="@+id/textViewIncrement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:gravity="center"
+
+        android:text="@string/increment_text"
+        app:layout_constraintTop_toBottomOf="@id/buttonNormal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ButtonBig"
+        />
+
+    <Button
+        android:id="@+id/buttonNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:layout_marginRight="8dp"
+        app:layout_constraintDimensionRatio="40:10"
+        android:textStyle="bold"
+        android:text="@string/normal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewCount"
+        app:layout_constraintBottom_toTopOf="@id/textViewIncrement"
+        />
+
+    <Button
+        android:id="@+id/ButtonBig"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:text="@string/big"
+        app:layout_constraintDimensionRatio="40:10"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/buttonNormal" />
+</android.support.constraint.ConstraintLayout>
